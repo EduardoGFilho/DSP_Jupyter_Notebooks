@@ -14,10 +14,7 @@ import matplotlib.pyplot as plt
 
 
 def plot_impulses(t, x):
-    # nan values won't be shown, but the x- axis will be spread to accomodate the array size
-    base = np.zeros_like(t)
-    for i in range(len(base)):
-        base[i] = np.nan
+
 
     posisitve_indexes = np.where(x > 0)
     
@@ -31,10 +28,15 @@ def plot_impulses(t, x):
     if np.any(negative_indexes):
         plt.stem(t[negative_indexes], x[negative_indexes], markerfmt="v", basefmt="k-")
 
-    plt.stem(t, base, basefmt="k-")
+    plt.plot(t,np.zeros_like(t), color = 'k')
 
 
 def sampled_to_discrete(x, discrete_Ts):
+    # Could be made more complete through the following:
+    # Divide the length of x by discrete_Ts
+    # Find the first non-zero index, store this value and following
+    # ones with discrete_Ts as step size, in case all of the estimated
+    # Samples haven't been counted, now do the same process but backwards
     return x[::discrete_Ts]
 
 
