@@ -15,7 +15,6 @@ import matplotlib.pyplot as plt
 
 def plot_impulses(t, x):
 
-
     posisitve_indexes = np.where(x > 0)
     
     negative_indexes = np.where(x < 0)
