@@ -13,7 +13,7 @@ import numpy as np
 import matplotlib.pyplot as plt
 
 
-def plot_impulses(t, x):
+def plot_impulses(t, x, label = ''):
 
     posisitve_indexes = np.where(x > 0)
     
@@ -21,7 +21,7 @@ def plot_impulses(t, x):
 
     if np.any(posisitve_indexes):
         plt.stem(
-            t[posisitve_indexes], x[posisitve_indexes], markerfmt="^", basefmt="k-"
+            t[posisitve_indexes], x[posisitve_indexes], markerfmt="^", basefmt="k-", label = label
         )
 
     if np.any(negative_indexes):
