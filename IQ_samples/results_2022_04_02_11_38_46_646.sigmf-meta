@@ -1,0 +1,28 @@
+{
+    "global": {
+        "core:author": "https://aerpaw.org/",
+        "core:collection": "NRDZ_70m.sigmf-collection",
+        "core:datatype": "cf64_le",
+        "core:description": "NRDZ experiment IQ samples with 70m drone height",
+        "core:sha512": "c6de140c216a9e70c8d03d7a7b6735f3e9f84b17607602e6523e9ba9ff32f1bfd55bd4e68dd998bcd0816e6dae47c26b8b26f160b4519ca15c083b14feeabac5",
+        "core:version": "1.0.1"
+    },
+    "captures": [
+        {
+            "core:frequency": 3510000000,
+            "core:sample_start": 0
+        }
+    ],
+    "annotations": [
+        {
+            "core:comment": "IQ",
+            "core:sample_count": 40800,
+            "core:sample_start": 0
+        },
+        {
+            "core:comment": "time_stamp",
+            "core:sample_count": 20,
+            "core:sample_start": 40800
+        }
+    ]
+}
